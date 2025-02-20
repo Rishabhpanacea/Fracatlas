@@ -151,6 +151,8 @@ async def segment_dicom(file: UploadFile = File(...)):
             segmented_property_type=codes.SCT.Blood,
             algorithm_type=hd.seg.SegmentAlgorithmTypeValues.MANUAL,
         )
+        print("mask:-",mask.shape)
+        print("unique:-",np.unique(mask))
 
         seg_obj = hd.seg.Segmentation(
                         source_images=source_images,

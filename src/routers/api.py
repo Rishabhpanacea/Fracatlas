@@ -237,7 +237,6 @@ async def segment_dicom(file: UploadFile = File(...)):
         source_image = pydicom.dcmread(DicomPath)
         source_images.append(source_image)
 
-        description = hd.seg.SegmentDescription(
         # Define segmentation metadata
         description = hd.seg.SegmentDescription(
             segment_number=1,

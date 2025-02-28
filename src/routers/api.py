@@ -114,6 +114,7 @@ async def segment_dicom(file: UploadFile = File(...)):
         root_dir_path = os.path.join(temp_dir, root_dir)
 
         file_paths = glob.glob(root_dir_path + '/**/*.dcm', recursive=True)
+        print("file_paths:-",file_paths)
         DicomPath = file_paths[0]
 
 
@@ -207,6 +208,7 @@ async def segment_dicom(file: UploadFile = File(...)):
         root_dir_path = os.path.join(temp_dir, root_dir)
 
         file_paths = glob.glob(root_dir_path + '/**/*.dcm', recursive=True)
+        print("file_paths:-",file_paths)
         DicomPath = file_paths[0]
 
 
